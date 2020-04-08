@@ -95,6 +95,7 @@
 	</dependencies>
     <build>
         <plugins>
+            
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -115,6 +116,27 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            
+            <plugin>
+              <groupId>org.apache.tomcat.maven</groupId>
+              <artifactId>tomcat7-maven-plugin</artifactId>
+              <version>2.0</version>
+              <executions>
+                  <execution>
+                      <id>deploy</id>
+                      <phase>package</phase>
+                      <goals>
+                          <goal>deploy</goal>
+                      </goals>
+                      <configuration>
+                        <update>true</update>
+                        <url>http://localhost:8080/manager/text</url>
+                        <username>deployer</username>
+                        <password>azerty</password>
+                      </configuration>
+                  </execution>
+              </executions>
             </plugin>
         </plugins>
     </build>
