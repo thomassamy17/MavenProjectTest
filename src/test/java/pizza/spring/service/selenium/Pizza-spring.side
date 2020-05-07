@@ -1,0 +1,288 @@
+{
+  "id": "bff3f9fa-5178-4734-918e-6d074d5d1559",
+  "version": "2.0",
+  "name": "Pizza-spring",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "d3f3981e-5810-4b36-b90c-618ed48d9ed8",
+    "name": "commander une pizza sans telephone",
+    "commands": [{
+      "id": "dccfd378-1c73-4380-9d05-cc879c59f599",
+      "comment": "",
+      "command": "open",
+      "target": "/pizza-spring",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1032410b-5d5b-412d-8906-a3e02f6b4b95",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Commander",
+      "targets": [
+        ["linkText=Commander", "linkText"],
+        ["css=li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Commander')]", "xpath:link"],
+        ["xpath=//nav[@id='menu']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/pizza-spring/commande')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Commander')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e8f7c26-af3a-4b1c-b9ab-30071f8ba6c9",
+      "comment": "",
+      "command": "addSelection",
+      "target": "id=pizzaId",
+      "targets": [
+        ["id=pizzaId", "id"],
+        ["name=pizzaId", "name"],
+        ["css=#pizzaId", "css:finder"],
+        ["xpath=//select[@id='pizzaId']", "xpath:attributes"],
+        ["xpath=//form[@id='commandeDto']/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "label=Trois fromages"
+    }, {
+      "id": "bc8471f5-834c-4377-a869-19f3c2fd7442",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=pizzaId",
+      "targets": [],
+      "value": "3"
+    }, {
+      "id": "f39967e6-c53d-4e17-8cfa-6efe156a7bf9",
+      "comment": "",
+      "command": "type",
+      "target": "id=nom",
+      "targets": [
+        ["id=nom", "id"],
+        ["name=nom", "name"],
+        ["css=#nom", "css:finder"],
+        ["xpath=//input[@id='nom']", "xpath:attributes"],
+        ["xpath=//form[@id='commandeDto']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "SAMY"
+    }, {
+      "id": "61ac8071-91ea-449a-ab2d-d7752c2b355e",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=nom",
+      "targets": [],
+      "value": "SAMY"
+    }, {
+      "id": "0703ab36-f6dc-4393-8533-1e1bbe87aaca",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='commandeDto']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Commander')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf0d01f4-adc2-4a5f-8177-4aa8eb486b2e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=telephone.errors",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ea48a511-b289-461a-b61e-37e265ce1971",
+    "name": "commander une pizza",
+    "commands": [{
+      "id": "05260597-9ab5-4b3c-bbd5-e8d839c639f9",
+      "comment": "",
+      "command": "open",
+      "target": "/pizza-spring",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e06f7f5-e23e-4d21-bb19-d9410fd271cd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Commander",
+      "targets": [
+        ["linkText=Commander", "linkText"],
+        ["css=li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Commander')]", "xpath:link"],
+        ["xpath=//nav[@id='menu']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/pizza-spring/commande')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Commander')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4aaece2-5c57-4d43-90e1-70d40ee406da",
+      "comment": "",
+      "command": "addSelection",
+      "target": "id=pizzaId",
+      "targets": [
+        ["id=pizzaId", "id"],
+        ["name=pizzaId", "name"],
+        ["css=#pizzaId", "css:finder"],
+        ["xpath=//select[@id='pizzaId']", "xpath:attributes"],
+        ["xpath=//form[@id='commandeDto']/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "label=Trois fromages"
+    }, {
+      "id": "9df019f6-a823-4ffc-9a77-e707f97cb05d",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=pizzaId",
+      "targets": [],
+      "value": "3"
+    }, {
+      "id": "93dec8e4-8571-4681-95a7-3f0af86f3b16",
+      "comment": "",
+      "command": "type",
+      "target": "id=nom",
+      "targets": [
+        ["id=nom", "id"],
+        ["name=nom", "name"],
+        ["css=#nom", "css:finder"],
+        ["xpath=//input[@id='nom']", "xpath:attributes"],
+        ["xpath=//form[@id='commandeDto']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "SAMY"
+    }, {
+      "id": "92a66175-3631-4279-a68e-60631d3a1ea2",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=nom",
+      "targets": [],
+      "value": "SAMY"
+    }, {
+      "id": "fc6af08e-3f87-4483-b9dc-7fbd66554cd5",
+      "comment": "",
+      "command": "type",
+      "target": "id=telephone",
+      "targets": [],
+      "value": "0605052311"
+    }, {
+      "id": "f8c17272-0975-43c4-89b8-72a645597216",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=telephone",
+      "targets": [],
+      "value": "0605052311"
+    }, {
+      "id": "7d03d7da-b325-4142-89b2-e593a5c58c99",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='commandeDto']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Commander')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "72289c07-1306-4bf8-8377-5e09e10ba490",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=recap-commande",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6c3e7fab-34be-43b3-a59c-16d7bb6f147a",
+    "name": "commander une pizza sans pizza",
+    "commands": [{
+      "id": "e340c07d-5114-4a83-8f7b-201c27d4c4ce",
+      "comment": "",
+      "command": "open",
+      "target": "/pizza-spring",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52bc3288-90ae-401f-94ba-904c8dde0965",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Commander",
+      "targets": [
+        ["linkText=Commander", "linkText"],
+        ["css=li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Commander')]", "xpath:link"],
+        ["xpath=//nav[@id='menu']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/pizza-spring/commande')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Commander')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a970cfba-67da-4eaa-b1ea-d551fff1abcc",
+      "comment": "",
+      "command": "type",
+      "target": "id=nom",
+      "targets": [
+        ["id=nom", "id"],
+        ["name=nom", "name"],
+        ["css=#nom", "css:finder"],
+        ["xpath=//input[@id='nom']", "xpath:attributes"],
+        ["xpath=//form[@id='commandeDto']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "SAMY"
+    }, {
+      "id": "0caad831-4e5c-41ff-be84-1d62ea53009b",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=nom",
+      "targets": [],
+      "value": "SAMY"
+    }, {
+      "id": "f082a9b0-a6dc-4895-af24-6ea679bd2259",
+      "comment": "",
+      "command": "type",
+      "target": "id=telephone",
+      "targets": [],
+      "value": "0605052311"
+    }, {
+      "id": "da97d41c-5513-4747-b508-ac56a414c3c7",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=telephone",
+      "targets": [],
+      "value": "0605052311"
+    }, {
+      "id": "318bc81b-833f-4653-812f-43a1600031d6",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='commandeDto']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Commander')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b5b48ac-c378-4469-b166-7f8e07627fee",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=pizzaId.errors",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2f5c273c-353a-42da-ad8e-9d9ff5e317e8",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
